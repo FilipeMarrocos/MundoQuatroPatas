@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia do Cão Educado — Mundo Quatro Patas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F8F4; --surface:#FFFFFF; --ink:#1B2620; --muted:#53635A; --line:#DCE4DD;
+  --green:#1F4D3A; --on-green:#FFFFFF; --sun:#F2C230; --on-sun:#1B2620; --accent:#1F4D3A; --no:#B3402F;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121A16;--surface:#1A2520;--ink:#EEF3EF;--muted:#A3B3A9;--line:#2B3A32;--green:#244F3D;--accent:#F2C230;--no:#E4806F;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121A16;--surface:#1A2520;--ink:#EEF3EF;--muted:#A3B3A9;--line:#2B3A32;--green:#244F3D;--accent:#F2C230;--no:#E4806F;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.08;margin:0}
+h1{font-weight:800;font-size:clamp(2.3rem,6.6vw,4.2rem);letter-spacing:-.02em}
+h2{font-weight:800;font-size:clamp(1.8rem,4.5vw,2.7rem);letter-spacing:-.015em}
+h3{font-weight:500;font-size:1.2rem}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:76px 0}
+.alt{background:var(--surface)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:58ch}
+.small{font-size:.9rem;color:var(--muted)}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.btn{display:inline-block;background:var(--sun);color:var(--on-sun);font:800 1.15rem "Bricolage Grotesque",sans-serif;padding:18px 34px;border-radius:999px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.dog{display:block;width:100%;height:auto}
+.golden{--coat:#E3A94F;--ear:#B97A2B;--muz:#F3D9A4}
+.black{--coat:#3A3F45;--ear:#23272B;--muz:#E9E4DA}
+.brown{--coat:#9B6B47;--ear:#6E4528;--muz:#E6CBA9}
+
+.top{background:var(--sun);color:var(--on-sun);text-align:center;font-weight:600;font-size:.92rem;padding:9px 16px}
+
+/* hero */
+.hero{background:var(--green);color:var(--on-green);padding:48px 0 76px;overflow:hidden}
+.brand{font:800 1rem "Bricolage Grotesque",sans-serif;margin-bottom:34px;opacity:.9}
+.hero-grid{display:grid;gap:40px;grid-template-columns:1.15fr .85fr;align-items:center}
+.hero .lead{color:rgba(255,255,255,.86);margin:22px 0 30px}
+.hero .small{color:rgba(255,255,255,.74);margin-top:14px}
+.stage{position:relative;max-width:400px;margin-left:auto;width:100%}
+.stage .disc{position:absolute;inset:4% 4% 14%;background:var(--sun);border-radius:50%}
+.stage .dog{position:relative;animation:pop .7s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{transform:translateY(24px) scale(.92);opacity:0}to{transform:none;opacity:1}}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips span{background:rgba(255,255,255,.12);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.95rem}
+
+/* dores */
+.pains{display:grid;gap:14px;margin-top:34px;grid-template-columns:repeat(2,1fr)}
+.pains div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px 18px 52px;position:relative}
+.pains div::before{content:"✕";position:absolute;left:18px;top:16px;font-weight:800;color:var(--no)}
+.turn{margin-top:36px;font:800 clamp(1.4rem,3.4vw,2rem)/1.2 "Bricolage Grotesque",sans-serif;max-width:30ch}
+
+/* livro */
+.two{display:grid;gap:48px;grid-template-columns:.8fr 1.2fr;align-items:center}
+.book{width:min(260px,70%);aspect-ratio:3/4;margin:0 auto;background:var(--green);color:var(--on-green);border-radius:6px 16px 16px 6px;box-shadow:inset 10px 0 0 rgba(0,0,0,.22),0 24px 40px rgba(0,0,0,.28);padding:22px 20px 20px 28px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-3deg)}
+.book small{font:800 .75rem "Bricolage Grotesque",sans-serif;opacity:.85}
+.book b{font:800 1.5rem/1.05 "Bricolage Grotesque",sans-serif}
+.book .dog{width:58%;margin:0 auto}
+.book i{font-style:normal;background:var(--sun);color:var(--on-sun);font-weight:700;font-size:.8rem;padding:4px 10px;border-radius:999px;align-self:flex-start}
+.list{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.list li{padding-left:34px;position:relative}
+.list li::before{content:"";position:absolute;left:0;top:.4em;width:18px;height:18px;border-radius:50%;background:var(--sun)}
+.list li::after{content:"";position:absolute;left:6px;top:.55em;width:4px;height:8px;border:solid var(--on-sun);border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+/* plano */
+.weeks{display:grid;gap:18px;margin-top:36px;grid-template-columns:repeat(3,1fr)}
+.week{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:22px 24px 28px}
+.week .dog{width:104px;margin-bottom:10px}
+.week b{display:block;font:800 .95rem "Bricolage Grotesque",sans-serif;color:var(--accent);margin-bottom:6px}
+.week p{color:var(--muted);margin-top:8px}
+
+/* para quem */
+.fit{display:grid;gap:18px;margin-top:34px;grid-template-columns:1fr 1fr}
+.fit>div{border-radius:20px;padding:28px;border:1px solid var(--line);background:var(--surface)}
+.fit .yes{background:var(--sun);color:var(--on-sun);border-color:transparent}
+.fit h3{margin-bottom:12px}.fit ul{margin:0;padding-left:20px;display:grid;gap:8px}
+
+/* comparação */
+.tbl{margin-top:34px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:560px}
+th,td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{font:800 1rem "Bricolage Grotesque",sans-serif}
+th.us,td.us{background:var(--sun);color:var(--on-sun);font-weight:700}
+.n{color:var(--no);font-weight:800}
+
+/* oferta */
+.offer{background:var(--green);color:var(--on-green);border-radius:28px;padding:50px 28px 44px;text-align:center}
+.offer .dog{width:120px;margin:0 auto 12px}
+.offer .lead{color:rgba(255,255,255,.86);margin:14px auto 22px}
+.price{font:800 clamp(3.2rem,10vw,5.2rem)/1 "Bricolage Grotesque",sans-serif;margin:6px 0 4px}
+.price small{font-size:1.2rem;font-weight:500;opacity:.8}
+.offer .list{max-width:440px;margin:0 auto 26px;text-align:left}
+.offer .small{color:rgba(255,255,255,.76);margin-top:16px}
+.seal{display:flex;gap:18px;align-items:center;max-width:680px;margin:0 auto;text-align:left}
+.seal b{flex:none;width:92px;height:92px;border-radius:50%;background:var(--sun);color:var(--on-sun);display:grid;place-items:center;text-align:center;font:800 1.9rem/1 "Bricolage Grotesque",sans-serif}
+.seal b span{display:block;font-size:.72rem;font-weight:600}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:500 1.15rem "Bricolage Grotesque",sans-serif;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px;max-width:62ch}
+footer{padding:30px 0 100px;text-align:center}
+
+.bar{display:none}
+@media (max-width:760px){
+  .hero-grid,.pains,.two,.weeks,.fit{grid-template-columns:1fr}
+  .stage{margin:0 auto;max-width:300px}
+  section{padding:54px 0}
+  .seal{flex-direction:column;text-align:center}
+  .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));justify-content:space-between;align-items:center;gap:12px}
+  .bar .btn{padding:12px 22px;font-size:1rem}
+  .bar b{font:800 1.2rem "Bricolage Grotesque",sans-serif}
+}
+@media (prefers-reduced-motion:reduce){.stage .dog{animation:none}.btn{transition:none}}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2052390685430445');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2052390685430445&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="dog" viewBox="0 0 200 210">
+    <ellipse cx="46" cy="98" rx="27" ry="54" fill="var(--ear)" transform="rotate(14 46 98)"/>
+    <ellipse cx="154" cy="98" rx="27" ry="54" fill="var(--ear)" transform="rotate(-14 154 98)"/>
+    <rect x="62" y="150" width="76" height="56" rx="28" fill="var(--coat)"/>
+    <ellipse cx="100" cy="188" rx="30" ry="22" fill="var(--muz)"/>
+    <ellipse cx="100" cy="98" rx="64" ry="66" fill="var(--coat)"/>
+    <ellipse cx="100" cy="128" rx="35" ry="27" fill="var(--muz)"/>
+    <circle cx="78" cy="88" r="8" fill="#1B1B1B"/><circle cx="122" cy="88" r="8" fill="#1B1B1B"/>
+    <circle cx="80.5" cy="85" r="2.6" fill="#fff"/><circle cx="124.5" cy="85" r="2.6" fill="#fff"/>
+    <ellipse cx="100" cy="113" rx="14" ry="10" fill="#1B1B1B"/>
+    <path d="M100 123v10M100 133q-12 9-22 0M100 133q12 9 22 0" stroke="#1B1B1B" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M91 137q9 26 18 0z" fill="#E86A7A"/>
+  </symbol>
+</svg>
+
+<div class="top">Acesso imediato em PDF e garantia de 7 dias</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Mundo Quatro Patas</div>
+    <div class="hero-grid">
+      <div>
+        <h1>Pare de brigar com seu cachorro. Em 21 dias ele aprende a te escutar.</h1>
+        <p class="lead">O Guia do Cão Educado é um plano diário, de 15 minutos, para adestrar em casa: sem adestrador, sem equipamento caro e sem depender de sorte.</p>
+        <a class="btn buy" href="#comprar">Quero meu cão educado</a>
+        <p class="small">Pagamento único. PDF liberado na hora.</p>
+        <div class="chips"><span>54 páginas</span><span>15 min por dia</span><span>7 dias de garantia</span></div>
+      </div>
+      <div class="stage">
+        <div class="disc"></div>
+        <svg class="dog golden" viewBox="0 0 200 210" role="img" aria-label="Ilustração de um cachorro sorrindo"><use href="#dog"/></svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Isso soa familiar?</h2>
+    <div class="pains">
+      <div>Você sai para passear e volta cansado, porque ele puxa a guia o tempo todo.</div>
+      <div>Ele late quando você sai e quando você chega, e os vizinhos já notaram.</div>
+      <div>Visita chega e ele pula, e você passa a vergonha de sempre.</div>
+      <div>Você chama, ele finge que não ouve, e você acaba desistindo.</div>
+      <div>Já assistiu a vários vídeos, mas cada um ensina de um jeito e nada vira rotina.</div>
+      <div>Você pensa em contratar um adestrador, mas o valor assusta.</div>
+    </div>
+    <p class="turn">E se o problema não for o seu cachorro, e sim a falta de um método?</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap two">
+    <div class="book" aria-hidden="true">
+      <small>MUNDO QUATRO PATAS</small>
+      <svg class="dog golden" viewBox="0 0 200 210"><use href="#dog"/></svg>
+      <b>Guia do Cão Educado</b>
+      <i>Plano de 21 dias</i>
+    </div>
+    <div>
+      <h2>Um método simples, na ordem certa</h2>
+      <p class="lead" style="margin-top:14px">O guia reúne tudo que você precisa em um só lugar, do primeiro dia ao último.</p>
+      <ul class="list">
+        <li>54 páginas em PDF, para ler no celular ou imprimir</li>
+        <li>Plano diário: você abre e sabe exatamente o que treinar hoje</li>
+        <li>Explicações simples de por que seu cão faz o que faz</li>
+        <li>Soluções para os problemas mais comuns do dia a dia</li>
+      </ul>
+      <p style="margin-top:28px"><a class="btn buy" href="#comprar">Quero começar hoje</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Seu plano de 21 dias</h2>
+    <div class="weeks">
+      <div class="week"><svg class="dog golden" viewBox="0 0 200 210" aria-hidden="true"><use href="#dog"/></svg><b>Semana 1</b><h3>A base</h3><p>Nome, atenção e os primeiros comandos. Seu cão aprende que prestar atenção em você vale a pena.</p></div>
+      <div class="week"><svg class="dog black" viewBox="0 0 200 210" aria-hidden="true"><use href="#dog"/></svg><b>Semana 2</b><h3>Comandos que funcionam</h3><p>Sentar, deitar, ficar e vir. Treinos curtos e repetidos, para o comando pegar de verdade.</p></div>
+      <div class="week"><svg class="dog brown" viewBox="0 0 200 210" aria-hidden="true"><use href="#dog"/></svg><b>Semana 3</b><h3>Rotina e convivência</h3><p>Passeio sem puxar, comportamento em casa e como manter tudo nos meses seguintes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>O guia é para você?</h2>
+    <div class="fit">
+      <div class="yes"><h3>É para você se</h3><ul><li>Quer treinar seu cão em casa, no seu ritmo</li><li>Tem cerca de 15 minutos por dia</li><li>Quer um passo a passo, sem enrolação</li><li>Tem filhote ou cão adulto</li></ul></div>
+      <div><h3>Não é para você se</h3><ul><li>Espera resultado sem treinar nenhum dia</li><li>Procura tratamento para um problema de saúde ou agressividade grave: nesses casos, fale com um veterinário</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Por que o guia, e não outro caminho?</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th></th><th>Vídeos soltos</th><th>Adestrador</th><th class="us">Guia do Cão Educado</th></tr></thead>
+        <tbody>
+          <tr><td>Plano completo, em ordem</td><td class="n">✕</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><td>Treina em casa, no seu horário</td><td>✓</td><td class="n">✕</td><td class="us">✓</td></tr>
+          <tr><td>Custo baixo</td><td>✓</td><td class="n">✕</td><td class="us">✓</td></tr>
+          <tr><td>Você sabe o que fazer a cada dia</td><td class="n">✕</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><td>Consulta quando quiser</td><td>✓</td><td class="n">✕</td><td class="us">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="comprar" class="alt">
+  <div class="wrap">
+    <div class="offer">
+      <svg class="dog golden" viewBox="0 0 200 210" aria-hidden="true"><use href="#dog"/></svg>
+      <h2>Comece hoje o treino do seu cão</h2>
+      <p class="lead">Quanto antes você começa, antes o passeio fica tranquilo.</p>
+      <ul class="list">
+        <li>Guia do Cão Educado em PDF (54 páginas)</li>
+        <li>Plano diário de 21 dias</li>
+        <li>Acesso imediato depois da compra</li>
+      </ul>
+      <div class="price"><small>R$</small> 19,90</div>
+      <p class="small" style="margin:0 0 24px">pagamento único</p>
+      <a class="btn buy" href="#">Quero meu cão educado</a>
+      <p class="small">Compra segura. PDF enviado para o seu e-mail.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="seal">
+      <b>7<span>DIAS</span></b>
+      <div><h3>Risco zero</h3><p class="lead" style="margin-top:8px">Teste o guia por 7 dias. Se achar que não é para você, peça o reembolso e devolvemos o valor, sem burocracia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2 style="margin-bottom:24px">Perguntas frequentes</h2>
+    <details><summary>Funciona com cachorro adulto?</summary><p>Sim. Cães de qualquer idade aprendem. Filhotes e adultos seguem o mesmo plano, só muda o tempo de cada treino.</p></details>
+    <details><summary>Preciso de algum equipamento?</summary><p>Não. Você usa petiscos, uma guia comum e o espaço da sua casa.</p></details>
+    <details><summary>Não tenho muito tempo. Dá certo mesmo assim?</summary><p>Dá. São cerca de 15 minutos por dia, em sessões curtas.</p></details>
+    <details><summary>Como recebo o guia?</summary><p>Logo após a confirmação do pagamento, você recebe o PDF por e-mail para baixar e usar quando quiser.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias para pedir o reembolso, sem burocracia.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <h2>Seu cão pode aprender. Falta só começar.</h2>
+    <p class="lead" style="margin:14px auto 28px">21 dias de treino curto e um cachorro que escuta.</p>
+    <a class="btn buy" href="#">Quero meu cão educado</a>
+  </div>
+</section>
+
+<footer><div class="wrap small">Mundo Quatro Patas. Todos os direitos reservados.</div></footer>
+
+<div class="bar"><b>R$ 19,90</b><a class="btn buy" href="#">Comprar agora</a></div>
+
+<script>
+  var CHECKOUT_URL = "https://pay.kiwify.com.br/PmGPPVh";
+  document.querySelectorAll("a.buy").forEach(function (a) {
+    if (a.getAttribute("href") === "#") a.href = CHECKOUT_URL;
+    a.addEventListener("click", function () {
+      if (a.href === CHECKOUT_URL && window.fbq) fbq("track", "InitiateCheckout");
+    });
+  });
+</script>
+</body>
+</html>
