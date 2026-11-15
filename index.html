@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia do Cão Educado — Mundo Quatro Patas</title>
+<meta name="description" content="Guia em PDF com plano de 21 dias para educar seu cachorro em casa, com 15 minutos por dia. Acesso digital e 7 dias de garantia.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guia do Cão Educado — Mundo Quatro Patas">
+<meta property="og:description" content="Plano de 21 dias, 15 minutos por dia, para educar seu cachorro em casa.">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#14463F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+  PIXEL DA META: cole aqui o snippet base que já existe no site atual
+  (o que contém fbq('init', 'SEU_ID') e fbq('track','PageView')).
+  Não troque o ID. Este arquivo NÃO cria um pixel novo.
+============================================================= -->
+
+<style>
+:root{
+  --ink:#16282A; --muted:#4D6064; --forest:#14463F; --leaf:#1F7A5C;
+  --mint:#E7F2EC; --paper:#FBFDFB; --sun:#FFC83D; --sun-d:#F2B01E; --line:#D3E3DA;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;
+  padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,7.4vw,3.4rem);font-weight:800}
+h2{font-size:clamp(1.65rem,5.4vw,2.4rem);font-weight:800;margin-bottom:.6em}
+h3{font-size:1.15rem;font-weight:600}
+p{max-width:62ch}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+section{padding:60px 0}
+.alt{background:var(--mint)}
+:focus-visible{outline:3px solid var(--forest);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 28px;border-radius:999px;
+  background:var(--sun);color:#1b1500;font-weight:700;font-size:1.05rem;text-decoration:none;
+  box-shadow:0 3px 0 var(--sun-d);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--sun-d)}
+.note{font-size:.9rem;color:var(--muted);margin-top:12px}
+
+/* HERO */
+.hero{background:var(--forest);color:#fff;padding:36px 0 56px;position:relative;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(14,50,45,.88) 0%,rgba(14,50,45,.78) 55%,rgba(14,50,45,.9) 100%)}
+@media(min-width:820px){
+  .hero{padding:48px 0 84px}
+  .hero::before{background:linear-gradient(90deg,rgba(14,50,45,.94) 0%,rgba(14,50,45,.82) 42%,rgba(14,50,45,.12) 100%)}
+}
+.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:28px;display:flex;align-items:center;gap:8px}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.hero p.sub{font-size:1.12rem;margin:18px 0 22px;color:#D9EBE3}
+.badge{display:inline-block;background:rgba(255,255,255,.12);border-radius:999px;padding:6px 14px;font-size:.88rem;margin-bottom:18px}
+.perks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:8px}
+.perks li{padding-left:28px;position:relative}
+.perks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--sun);
+  box-shadow:inset 0 0 0 4px var(--forest),0 0 0 2px var(--sun)}
+.price-line{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.price-line b{font-family:'Bricolage Grotesque',sans-serif;font-size:2.2rem}
+.price-line span{color:#BBD6CB;font-size:.95rem}
+
+/* ebook mockup */
+.mock{justify-self:center;position:relative;width:min(300px,78%);aspect-ratio:3/4}
+.cover{position:absolute;inset:0;border-radius:6px 14px 14px 6px;background:linear-gradient(160deg,#FFD866,#FFC83D 55%,#F5A91A);
+  color:#2A1E00;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:-10px 0 0 #D9980F inset,0 24px 40px rgba(0,0,0,.35);transform:rotate(-3deg)}
+.cover small{font-weight:700;font-size:.8rem}
+.cover strong{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;line-height:1.02;font-weight:800}
+.cover em{font-style:normal;font-size:.9rem;font-weight:500}
+.paw{position:absolute;right:14px;bottom:14px;width:64px;opacity:.9}
+
+/* dor */
+.cards{display:grid;gap:14px;margin:26px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.card svg{flex:none;width:30px;height:30px;color:var(--leaf);margin-top:2px}
+.reassure{font-size:1.15rem;font-weight:500;border-left:5px solid var(--sun);padding-left:16px;margin-top:8px}
+
+/* conteúdo */
+.learn{display:grid;gap:14px;margin-top:24px}
+.learn .card{display:block}
+.learn h3{margin-bottom:6px}
+.learn p{color:var(--muted);font-size:.98rem}
+
+/* como funciona */
+.steps{display:grid;gap:18px;margin-top:24px;counter-reset:s}
+.step{position:relative;padding-left:62px;counter-increment:s}
+.step::before{content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--forest);color:#fff;
+  display:grid;place-items:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem}
+.step h3{margin-bottom:4px}
+.step p{color:var(--muted)}
+
+/* avaliações */
+.empty{border:2px dashed var(--line);border-radius:var(--r);padding:26px;background:#fff;margin-top:20px}
+.empty p{color:var(--muted)}
+/* quando houver depoimentos reais, duplique o bloco .review abaixo (veja o comentário no HTML) */
+.reviews{display:grid;gap:14px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.review blockquote{margin:0}
+.review p{font-size:1.02rem}
+.review figcaption{font-weight:700;color:var(--forest)}
+@media(min-width:820px){.reviews{grid-template-columns:1fr 1fr}}
+
+/* oferta */
+.offer{display:grid;gap:28px;align-items:center}
+.offer-box{background:#fff;border:2px solid var(--forest);border-radius:24px;padding:28px}
+.offer-box ul{list-style:none;padding:0;display:grid;gap:10px;margin:16px 0 22px}
+.offer-box li{padding-left:28px;position:relative}
+.offer-box li::before{content:"✓";position:absolute;left:0;color:var(--leaf);font-weight:700}
+.offer-price{font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;font-weight:800;line-height:1}
+.offer-box .btn{width:100%}
+
+.safe{display:grid;gap:14px;margin-top:22px}
+.safe .card{background:var(--paper)}
+
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--leaf)}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:16px;color:var(--muted)}
+
+.final{background:var(--forest);color:#fff;text-align:center}
+.final p{margin:0 auto 24px;color:#D9EBE3}
+footer{padding:26px 0;text-align:center;font-size:.85rem;color:var(--muted)}
+
+/* barra fixa mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:14px;
+  transform:translateY(110%);transition:transform .25s}
+.sticky.on{transform:none}
+.sticky .p{line-height:1.15;font-size:.8rem;color:var(--muted)}
+.sticky .p b{display:block;font-size:1.25rem;color:var(--ink);font-family:'Bricolage Grotesque',sans-serif}
+.sticky .btn{flex:1;min-height:50px;padding:10px 16px}
+
+@media(min-width:820px){
+  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .cards,.learn{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .offer{grid-template-columns:1fr 1fr}
+  .safe{grid-template-columns:repeat(3,1fr)}
+  .sticky{display:none}
+  body{padding-bottom:0}
+  section{padding:84px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="hero-bg" src="img/hero-caes.webp" alt="" width="1280" height="853" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 64 64" fill="#FFC83D" aria-hidden="true"><ellipse cx="32" cy="42" rx="14" ry="12"/><ellipse cx="14" cy="28" rx="7" ry="9"/><ellipse cx="26" cy="15" rx="7" ry="9"/><ellipse cx="40" cy="15" rx="7" ry="9"/><ellipse cx="52" cy="28" rx="7" ry="9"/></svg>
+      Mundo Quatro Patas
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="badge">Guia digital em PDF</span>
+        <h1>Seu cachorro ainda faz xixi pela casa? Ensine o lugar certo de uma vez por todas.</h1>
+        <p class="sub">Um plano de 21 dias, com 15 minutos por dia, para educar seu cão em casa. Passo a passo, mesmo que você esteja começando do zero.</p>
+        <ul class="perks">
+          <li>54 páginas para ler no celular ou imprimir</li>
+          <li>Plano diário: você sabe o que treinar hoje</li>
+          <li>Para filhotes e cães adultos</li>
+        </ul>
+        <div class="price-line"><b>R$ 19,90</b><span>pagamento único</span></div>
+        <a class="btn" href="https://pay.kiwify.com.br/PmGPPVh" data-checkout="hero">QUERO ENSINAR MEU CACHORRO</a>
+        <p class="note">Acesso digital após a confirmação do pagamento. 7 dias de garantia.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="dor">
+  <div class="wrap">
+    <h2>Você também passa por alguma dessas situações?</h2>
+    <div class="cards">
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11z"/></svg><p>Seu cachorro faz xixi em qualquer lugar.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><p>Você encontra surpresas pela casa quando chega.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.700M3 4v5h5"/></svg><p>Já tentou ensinar, mas não conseguiu manter.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 9a3 3 0 1 1 4 2.800c-.700.400-1 1-1 1.700M12 17h.01"/></svg><p>Não sabe como corrigir comportamentos indesejados.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 15s1.500-2 4-2 4 2 4 2M9 9h.01M15 9h.01"/></svg><p>Fica frustrado porque parece que ele não aprende.</p></div>
+    </div>
+    <p class="reassure">Você não precisa desistir. Com orientação e consistência, é possível criar bons hábitos.</p>
+  </div>
+</section>
+
+<section class="alt" id="solucao">
+  <div class="wrap">
+    <h2>Conheça o Guia do Cão Educado</h2>
+    <p>Um material de apoio, em ordem e sem enrolação, para quem quer educar o cachorro em casa. Você abre o guia, vê o treino do dia e aplica em cerca de 15 minutos.</p>
+    <div class="learn">
+      <!-- CONFIRMAR: só deixe este card se o guia realmente tiver conteúdo sobre xixi/local certo -->
+      <div class="card"><div><h3>Local certo para as necessidades</h3><p>Orientações para ensinar onde ele deve fazer xixi e como manter a rotina.</p></div></div>
+      <div class="card"><div><h3>Nome e atenção</h3><p>A base: seu cão aprende que prestar atenção em você vale a pena.</p></div></div>
+      <div class="card"><div><h3>Comandos básicos</h3><p>Sentar, deitar, ficar e vir, com treinos curtos e repetidos.</p></div></div>
+      <div class="card"><div><h3>Passeio sem puxar a guia</h3><p>Como deixar o passeio mais tranquilo para vocês dois.</p></div></div>
+      <div class="card"><div><h3>Rotina e convivência</h3><p>Comportamento em casa e como manter o que ele aprendeu nos meses seguintes.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p>Cada cachorro tem o seu ritmo. O guia dá a ordem; a constância é com vocês.</p>
+    <div class="steps">
+      <div class="step"><h3>Acesse o material</h3><p>Depois da confirmação do pagamento, você recebe o PDF.</p></div>
+      <div class="step"><h3>Aplique o treino do dia</h3><p>Siga as orientações e adapte à realidade do seu cachorro.</p></div>
+      <div class="step"><h3>Mantenha a rotina</h3><p>Treinos curtos todos os dias e acompanhe a evolução.</p></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn" href="https://pay.kiwify.com.br/PmGPPVh" data-checkout="meio">QUERO ENSINAR MEU CACHORRO</a></p>
+  </div>
+</section>
+
+<section class="alt" id="avaliacoes">
+  <div class="wrap">
+    <h2>Quem já conhece o Mundo Quatro Patas</h2>
+    <p class="note" style="margin:0 0 22px">Relatos de clientes que usaram o guia.</p>
+    <!-- Para adicionar outro depoimento real (com autorização), copie um bloco <figure class="review"> -->
+    <div class="reviews">
+      <figure class="review">
+        <blockquote><p>Minha maior dificuldade era ensinar meu cachorro a fazer xixi no tapetinho. Gostei bastante das orientações do guia, principalmente por serem simples de entender e aplicar.</p></blockquote>
+        <figcaption>Andreia</figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote><p>Tenho um filhotinho e estava meio perdida sobre como começar a educá-lo. O material me ajudou a entender melhor como criar uma rotina de aprendizado.</p></blockquote>
+        <figcaption>Carlos</figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote><p>Eu não sabia muito bem como lidar com alguns comportamentos do meu cachorro. Gostei da organização do conteúdo e das dicas práticas.</p></blockquote>
+        <figcaption>Duda</figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote><p>Achei o guia fácil de acompanhar. Consegui entender melhor como trabalhar a educação do meu cachorro sem complicar tanto as coisas.</p></blockquote>
+        <figcaption>Jessica</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="oferta">
+  <div class="wrap offer">
+    <div>
+      <h2>Comece hoje a transformar a convivência com seu cachorro</h2>
+      <p>Um guia direto, em PDF, para você treinar em casa, no seu horário, sem equipamento caro.</p>
+      <div class="mock" aria-hidden="true" style="margin:36px auto 12px">
+        <div class="cover">
+          <small>Mundo Quatro Patas</small>
+          <strong>Guia do Cão Educado</strong>
+          <em>Plano de 21 dias</em>
+          <svg class="paw" viewBox="0 0 64 64" fill="#2A1E00"><ellipse cx="32" cy="42" rx="14" ry="12"/><ellipse cx="14" cy="28" rx="7" ry="9"/><ellipse cx="26" cy="15" rx="7" ry="9"/><ellipse cx="40" cy="15" rx="7" ry="9"/><ellipse cx="52" cy="28" rx="7" ry="9"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="offer-box">
+      <h3>Guia do Cão Educado</h3>
+      <ul>
+        <li>PDF com 54 páginas</li>
+        <li>Plano de 21 dias, com 15 minutos por dia</li>
+        <li>Serve para filhotes e cães adultos</li>
+        <li>Acesso digital após a confirmação do pagamento</li>
+      </ul>
+      <div class="offer-price">R$ 19,90</div>
+      <p class="note" style="margin:6px 0 18px">pagamento único</p>
+      <a class="btn" href="https://pay.kiwify.com.br/PmGPPVh" data-checkout="oferta">QUERO ACESSAR MEU GUIA</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="garantia">
+  <div class="wrap">
+    <h2>Compra segura e garantia</h2>
+    <div class="safe">
+      <!-- CONFIRMAR no painel da Kiwify: garantia de 7 dias ativa -->
+      <div class="card"><div><h3>7 dias de garantia</h3><p>Se achar que o guia não é para você, peça o reembolso dentro do prazo.</p></div></div>
+      <div class="card"><div><h3>Pagamento pela Kiwify</h3><p>A compra acontece no checkout da Kiwify, plataforma de pagamentos.</p></div></div>
+      <div class="card"><div><h3>Acesso pelo celular</h3><p>O PDF abre no celular, no computador ou pode ser impresso.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>O guia serve para filhotes?</summary><p>Sim. Filhotes e adultos seguem o mesmo plano; muda só o tempo de cada treino.</p></details>
+    <details><summary>E para cães adultos?</summary><p>Sim. Cães de qualquer idade podem aprender, cada um no seu ritmo.</p></details>
+    <details><summary>Preciso ter experiência com adestramento?</summary><p>Não. O guia foi feito para quem está começando do zero.</p></details>
+    <details><summary>Como recebo o material?</summary><p>Depois da confirmação do pagamento, o acesso ao PDF é liberado e enviado para o seu e-mail.</p></details>
+    <details><summary>Posso ler pelo celular?</summary><p>Pode. O PDF funciona no celular e também pode ser impresso.</p></details>
+    <details><summary>O pagamento é seguro?</summary><p>O pagamento é feito no checkout da Kiwify.</p></details>
+    <details><summary>Em quanto tempo meu cachorro aprende?</summary><p>Depende de cada cachorro, da idade e da constância dos treinos. O plano tem 21 dias, mas não é possível garantir um prazo de resultado.</p></details>
+    <details><summary>Serve para agressividade ou problema de saúde?</summary><p>Não. Nesses casos, procure um veterinário ou um profissional.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Seu cachorro pode aprender novos hábitos. Comece hoje.</h2>
+    <p>Tenha orientações práticas para começar a educar seu melhor amigo dentro de casa.</p>
+    <a class="btn" href="https://pay.kiwify.com.br/PmGPPVh" data-checkout="final">QUERO ACESSAR MEU GUIA</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Mundo Quatro Patas. Todos os direitos reservados.</div></footer>
+
+<div class="sticky" id="sticky">
+  <div class="p">Guia do Cão Educado<b>R$ 19,90</b></div>
+  <a class="btn" href="https://pay.kiwify.com.br/PmGPPVh" data-checkout="fixo">QUERO MEU GUIA</a>
+</div>
+
+<script>
+(function(){
+  // Eventos do Pixel (só disparam se o pixel existir; não criam pixel novo)
+  function track(name, params){ try{ if(typeof fbq==='function') fbq('track', name, params||{}); }catch(e){} }
+
+  // ViewContent: uma vez por visita
+  track('ViewContent', {content_name:'Guia do Cão Educado', content_type:'product', value:19.90, currency:'BRL'});
+
+  // InitiateCheckout: no clique de qualquer botão de compra (o link segue normalmente para a Kiwify)
+  var fired = false;
+  document.querySelectorAll('[data-checkout]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(fired) return; fired = true; setTimeout(function(){fired=false}, 1500);
+      track('InitiateCheckout', {content_name:'Guia do Cão Educado', value:19.90, currency:'BRL'});
+    });
+  });
+
+  // Barra fixa: aparece depois da primeira dobra e some quando a oferta final está na tela
+  var bar = document.getElementById('sticky'), hero = document.querySelector('.hero'), fin = document.querySelector('.final');
+  if('IntersectionObserver' in window){
+    var seen = {hero:true, fin:false};
+    function upd(){ bar.classList.toggle('on', !seen.hero && !seen.fin); }
+    new IntersectionObserver(function(e){ seen.hero = e[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function(e){ seen.fin = e[0].isIntersecting; upd(); }).observe(fin);
+  } else { bar.classList.add('on'); }
+})();
+// Purchase NÃO é disparado aqui: configure na integração Pixel/API de Conversões da Kiwify.
+</script>
+</body>
+</html>
